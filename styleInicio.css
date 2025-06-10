@@ -1274,6 +1274,16 @@ footer h1{
         font-size: 20px;
     }
 
+    #circuloCursor{
+        display: none;
+    }
+    #fullscreen-overlay {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+    }
+
 }
 
 @media screen and (max-width: 700px){
@@ -1351,14 +1361,20 @@ footer h1{
 
     .digitales{
         top: 40%;
-        left: 15%
+        left: -40%;
+        width: 70%;
     }
 
     .artisticas{
         top: 40%;
-        right: 15%;
+        right: -40%;
+        width: 70%;
     }
-    
+    .skills-box img{
+        height: 50%;
+        width: auto;
+
+    }
 
     .skills-box h1{
         margin-bottom: 0;
@@ -1367,9 +1383,10 @@ footer h1{
 
     .slider{
         bottom:0;
+        top: 105%;
     }
     .slider img{
-        width: 30%;
+        width: 20%;
     }
     
     .contacto-seccion{
@@ -1379,11 +1396,12 @@ footer h1{
     }
 
     .contacto-seccion h1{
-        top: -40px;
-        left: 25%;
+        top: -7%;
+        left: 35%;
+        
     }
     .social-box{
-        top:-10px;
+        top:-40%;
     }
     footer h1{
         font-size:17px;
@@ -1395,5 +1413,18 @@ footer h1{
 
     .presentacion{
         height: 100%;
+    }
+    .menu-icono{
+        display: inline;
+    }
+
+    #circuloCursor{
+        display: none;
+    }
+    #fullscreen-overlay {
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
     }
 }
