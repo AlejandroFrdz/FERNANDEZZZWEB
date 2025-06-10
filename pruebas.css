@@ -1,0 +1,179 @@
+body {
+   font-family: sans-serif;
+   background-color: #141414;
+   color: lightgray;
+   margin: 0;
+   padding: 0;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+}
+
+.proyectos {
+   margin-top: 50px;
+   width: 80%;
+}
+
+.seccion-titulos {
+   font-size: 2rem;
+   margin-bottom: 20px;
+}
+
+.carta-proyecto-foto {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 100%;
+   max-width: 300px;
+   margin: 0 auto;
+}
+
+.proyecto-info {
+   width: 100%;
+   text-align: center;
+   margin-top: 15px;
+}
+
+.proyecto-info h1 {
+   font-size: 24px;
+}
+
+.proyecto-info p {
+   font-size: 16px;
+   margin-bottom: 15px;
+}
+
+.proyecto-info button {
+   background: #141414;
+   border: 1px solid #4c2150;
+   color: white;
+   padding: 10px 20px;
+   cursor: pointer;
+   box-shadow: 0 0 5px #4c2150;
+}
+
+.proyecto-info button:hover {
+   box-shadow: 0 0 15px #4c2150;
+}
+
+.proyecto-fotbox {
+   perspective: 1000px;
+   width: 300px;
+   height: 300px;
+}
+
+.flip-container {
+   perspective: 1000px;
+   width: 300px;
+   height: 300px;
+}
+
+.flip-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transform-style: preserve-3d;
+   transition: transform 0.8s ease;
+   transform-origin: center center;
+}
+
+.flip-container:hover .flip-inner:not(.flipped):not(.fullscreen) {
+   transform: scale(1.15);
+}
+
+.flip-inner.zoomed {
+   transform: scale(1.15);
+}
+
+.flip-inner.flipped {
+   transform: rotateY(180deg);
+}
+
+.flip-inner.flipped.zoomed {
+   transform: rotateY(180deg) scale(1.15);
+}
+
+.flip-front, .flip-back {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   border-radius: 20px;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+
+.flip-front img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   filter: blur(7px);
+}
+
+.flip-back {
+   background-color: #4c2150;
+   color: white;
+   transform: rotateY(180deg);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.gridIntera {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 20px;
+   width: 100%;
+   padding: 20px;
+   justify-items: center;
+}
+
+.fullscreen-container {
+   position: fixed !important;
+   top: 50% !important;
+   left: 50% !important;
+   transform: translate(-50%, -50%) !important;
+   z-index: 1000 !important;
+   width: auto !important;
+   height: auto !important;
+}
+
+.flip-inner.fullscreen {
+   width: 80vw !important;
+   height: 80vh !important;
+   max-width: 500px !important;
+}
+
+.flip-inner.fullscreen.flipped {
+   transform: rotateY(180deg) !important;
+}
+
+.flip-inner.fullscreen:not(.flipped) {
+   transform: scale(1) !important;
+}
+
+.flip-inner.fullscreen .flip-front img {
+   filter: none !important;
+   border-radius: 10px;
+   object-fit: contain !important;
+
+}
+
+.fullscreen-container::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: -1;
+    pointer-events: none; /* Esto permite hacer clic a través del fondo */
+}
