@@ -1314,6 +1314,7 @@ footer h1{
         line-height: 50px;
     }
 
+
     .yoSoyVideo-Box{
         top: 48%;
         right: 17%;
@@ -1324,7 +1325,7 @@ footer h1{
     }
 
     .carta video{
-        width:100%;
+        width:90%;
     }
 
     .proyectos{
@@ -1377,16 +1378,22 @@ footer h1{
         margin-bottom: 50px;
     }
 
-    .contacto-seccion .seccion.titulo{
+    .contacto-seccion h1{
         top: -40px;
         left: 25%;
     }
-
+    .social-box{
+        top:-10px;
+    }
     footer h1{
         font-size:17px;
     }
 
     .proyecto-vidbox{
         min-width: 200px;
+    }
+
+    .presentacion{
+        height: 100%;
     }
 }
