@@ -187,6 +187,8 @@ header ul li{
 .yoSoyVideo-Box{
     position: absolute;
     right: 7%;
+    z-index: -1;
+
 }
 
 .yoSoyVideo-Box video{
@@ -1179,3 +1181,212 @@ footer h1{
 }
 
 /*RESPONSIVES TABLETS Y MOVIL*/
+
+
+@media (max-aspect-ratio: 16/9){
+    .video-fondo{
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (min-aspect-ratio: 16/9){
+    .video-fondo{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width:1000px){
+
+    .yoSoy-Info h1{
+        font-family: 40px;
+        max-width: 400px;
+        line-height: 40px;
+    }
+
+    .yoSoy-Info p{
+        max-width: 300px;
+    }
+    .yoSoyVideo-Box {
+        margin-top: 15%;
+        right: 13%;
+    }
+    .yoSoyVideo-Box video{
+        height: 200px;
+    }
+
+    .info-section-titulo{
+        font-size: 30px;
+    }
+
+    .cartas-info{
+        grid-template-columns: auto;
+    }
+
+    .carta:nth-child(3){
+        grid-column: span 2;
+        height:70vh;
+    }
+
+    .cartas-info .carta h1 {
+        font-size: 20px;
+    }
+
+    .carta:nth-child(3) h1{
+        bottom:25%;
+    }
+
+    .carta video {
+        height: 65%;
+        margin-top: 5%;
+    }
+
+    .proyectos{
+        margin-bottom: 300px;
+    }
+
+    .proyecto-vidbox video {
+        width: 250px;
+        margin-left: -100px;
+    }
+
+    .proyecto-info{
+        padding-left:0;
+        margin-left: -50px;
+    }
+
+    .proyecto-info h1{
+        font-size: 20px;
+        max-width: 200px;
+        text-wrap: wrap;
+
+    }
+    .proyecto-info p{
+        font-size: 10px;
+        max-width: 200px;
+        text-wrap: wrap;
+        min-width: 0;
+        
+    }
+    footer h1{
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width: 700px){
+    header{
+        position:fixed;
+        height: 50px;
+
+    }
+    header ul{
+        display:none;
+    }
+
+    header .box-icons{
+        display:none;
+    }
+
+    header h1{
+        font-size: 25px;
+    }
+
+    .yoSoy{
+        flex-direction: column;
+    }
+
+    .autoBlur{
+        animation: none;
+    }
+
+    .yoSoy-Info{
+        bottom: 5%;
+    }
+
+    .scroll-abajo{
+        bottom: -10%;
+    }
+
+    .yoSoy-Info h1{
+        line-height: 50px;
+    }
+
+    .yoSoyVideo-Box{
+        top: 48%;
+        right: 17%;
+    }
+
+    .yoSoyVideo-Box video{
+        height: 210px;
+    }
+
+    .carta video{
+        width:100%;
+    }
+
+    .proyectos{
+        margin-bottom: 600px;
+    }
+
+    .carta-proyecto{
+        flex-direction: column;
+        margin-left: 25%;
+        gap: 30px;
+    }
+    
+    .proyecto-info{
+        width: 85%;
+    }
+
+    .proyecto-info h1{
+        text-wrap: nowrap;
+    }
+    .proyecto-info p{
+        max-width: 300px;
+    }
+
+    .digitales{
+        top: 40%;
+        left: 15%
+    }
+
+    .artisticas{
+        top: 40%;
+        right: 15%;
+    }
+    
+
+    .skills-box h1{
+        margin-bottom: 0;
+        margin-top: 70px;
+    }
+
+    .slider{
+        bottom:0;
+    }
+    .slider img{
+        width: 30%;
+    }
+    
+    .contacto-seccion{
+        flex-direction: column;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+    .contacto-seccion .seccion.titulo{
+        top: -40px;
+        left: 25%;
+    }
+
+    footer h1{
+        font-size:17px;
+    }
+
+    .proyecto-vidbox{
+        min-width: 200px;
+    }
+}
